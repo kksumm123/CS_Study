@@ -1,0 +1,32 @@
+Loop
+{
+	Send, ^{C}
+	Random,Sleep, 5,9
+	IfInString, clipboard, %editstring%
+	FileEncoding, utf-8
+	FileRead, outvar, want.txt
+	send, ^{C}
+	IfInString, outvar, %Clipboard%
+	{
+		MsgBox Á¦¹ß ¤Ð¤Ð
+	}
+	else
+	{
+		gosub, 1
+	}
+}
+return
+
+1:
+{
+	Random,x,220,253
+	Random,y,331,295
+	MouseClick, Right, x, y,,%Sleep%
+	Random,x,364,308
+	Random,y,419,462
+	MouseClick, Left, x, y,,%Sleep%
+	MouseMove, 316, 440
+	Send, ^{C}
+	Sleep, 150
+	return
+}
