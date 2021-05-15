@@ -8,14 +8,8 @@
     스택 영역 : 함수의 실행 메모리영역 ( ex 지역변수 )
  */
 
-class MyClass
-{
-    static public int 스태틱변수;
-    public int 인트변수 = 10;
-    public float 플롯변수 = 10;
-}
 
-    class SidePlayer
+class SidePlayer
 {
     // 정적 멤버 변수 (static)
     // 객체귀속 x, 클래스 귀속, 전체 객체가 공유
@@ -72,14 +66,6 @@ namespace _13_StaticVar
     {
         static void Main(string[] args)
         {
-            MyClass ClassA = new MyClass();
-
-            ClassA.인트변수 = 
-
-            MyClass ClassB = new MyClass();
-
-            MyClass ClassC = new MyClass();
-
             // 모든 객체가 공유하고 싶은 변수를 만들 때 사용
             SidePlayer NewSidePlayer1 = new SidePlayer();
             SidePlayer NewSidePlayer2 = new SidePlayer();
@@ -104,7 +90,7 @@ namespace _13_StaticVar
             NewPlayer3.Setting(100, 500);
 
             // 어느 클래스가 공유하고 싶은 값,
-            // 몬스터 클래스라면, 현존하는 몬스터의 수
+            // ex) 몬스터 클래스라면, 현존하는 몬스터의 수
             // 모든 객체가 공유하는 하나의 값
 
             Monster NewMonster1 = new Monster();
